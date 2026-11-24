@@ -3,12 +3,13 @@ package entity;
 public class Task {
     private String taskName;
     private String taskDescription;
-    private boolean isComplete;
-    private int id;
+    private boolean taskIsComplete;
+    private int taskId;
 
-    public Task(String taskName, String taskDescription) {
+    public Task(String taskName, String taskDescription, int taskId) {
         this.taskName = taskName;
         this.taskDescription = taskDescription;
+        this.taskId = taskId;
     }
 
     public String getTaskName() {
@@ -17,6 +18,10 @@ public class Task {
 
     public String getTaskDescription() {
         return this.taskDescription;
+    }
+
+    public int getTaskId() {
+        return taskId;
     }
 
 }
