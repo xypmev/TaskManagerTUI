@@ -4,12 +4,11 @@ public class Task {
     private String taskName;
     private String taskDescription;
     private boolean taskIsComplete;
-    private int taskId;
+    private Long taskId;
 
-    public Task(String taskName, String taskDescription, int taskId) {
+    public Task(String taskName, String taskDescription) {
         this.taskName = taskName;
         this.taskDescription = taskDescription;
-        this.taskId = taskId;
     }
 
     public String getTaskName() {
@@ -20,8 +19,11 @@ public class Task {
         return this.taskDescription;
     }
 
-    public int getTaskId() {
+    public Long getTaskId() {
         return taskId;
+    }
+    public void setTaskId(Long id) {
+        this.taskId = id;
     }
 
 }

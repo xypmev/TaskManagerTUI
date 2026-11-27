@@ -23,7 +23,6 @@ public class Interface {
             switch (choice) {
                 case "1" -> enterTaskInfo();
                 case "2" -> printAllTasks(tasksList);
-                //case "3" -> removeTask();
                 case "5" -> removeTask();
                 case "0" -> exitUi();
                 case "?" -> getInfo();
@@ -52,7 +51,7 @@ public class Interface {
     private void removeTask() {
         System.out.println("---Удаление задачи---");
         System.out.print("Введите ID задачи которую хотите удалить: ");
-        int idToDelete = Integer.parseInt(scanner.nextLine().trim());
+        Long idToDelete = Long.parseLong(scanner.nextLine().trim());
         taskService.deleteTask(idToDelete);
         System.out.println("Задача удалена");
 
